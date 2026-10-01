@@ -1,116 +1,150 @@
 :root {
-    --color-fuente-oscuro: #0F172A;
-    --color-primario: #2563EB;
-    --color-secundario: #DBE2EF;
-    --color-fondo: #F9F7F7;
-    --fuente: "Inter", sans-serif;
+  --color-fuente-oscuro: #0f172a;
+  --color-primario: #2563eb;
+  --color-secundario: #dbe2ef;
+  --color-fondo: #f9f7f7;
+  --fuente: "Inter", sans-serif;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    color: var(--color-fuente-oscuro);
-    font-family: var(--fuente);
-    font-size: 16px;
-    background-color: var(--color-fondo);
-    margin: 0 auto;
-    padding: 0;
+  color: var(--color-fuente-oscuro);
+  font-family: var(--fuente);
+  font-size: 16px;
+  background-color: var(--color-fondo);
+  max-width: 1200px; /* Evita que en monitores gigantes se estire al infinito */
+  margin: 0 auto; /* Centra todo el sitio en la pantalla */
+  padding: 0 1.5rem;
 }
 
-/*Prueba en Index.html */
+/* TIPOGRAFÍA Y RITMO VERTICAL */
+h1,
+h2,
+h3 {
+  margin-bottom: 0.75rem; /* Empuja hacia abajo al párrafo o elemento siguiente */
+}
+
+p {
+  margin-bottom: 1rem; /* Separa los párrafos entre sí */
+  line-height: 1.5; /* Le da aire entre renglón y renglón al texto largo */
+}
+
+header {
+  margin-bottom: 2.5rem; /* Despega el menú del inicio del contenido */
+}
+
+header nav ul {
+  display: flex; /* ítems en fila horizontal */
+  gap: 1.5rem; /* Separa los enlaces entre sí */
+  list-style: none; /* Elimina los puntitos */
+  padding: 0;
+}
+
 section {
-    margin-bottom: 20px;
+  margin-bottom: 2.5rem; /* Separa cada sección temática de la siguiente */
 }
 
-aside {
-    margin: 15px;
-    border-radius: 10px; /*Redondea los bordes de la box */
-    border-style:groove; /*Agrega las lineas al rededor de la box */
+/*
+.grilla-tarjetas dice: "yo acomodo a mis hijos en fila, los envuelvo si no entran (flex-wrap: wrap) y dejo 1.5rem de espacio entre ellos (gap: 1.5rem)".
+.tarjeta dice: "yo solo me preocupo por mi relleno, mis bordes y medir al menos 280px".
+
+*/
+
+.grilla-tarjeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
 }
 
-
-#resumen_lugares {
-    display: flex;
-    flex-wrap: wrap;       /* Permite que bajen si la pantalla es chica */
-    justify-content: space-around; /* Separa las cajas uniformemente */
+.tarjeta {
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 1px solid var(--color-secundario); /* Borde moderno y sutil */
+  background-color: #ffffff; /* Fondo blanco para que contraste con el fondo
+  general */
+  text-align: center;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
 }
 
-/* El título ocupa el 100% del ancho para quedar arriba */
-#resumen_lugares h2 {
-    width: 100%;
+.banner-contacto {
+  background-color: var(--color-secundario);
+  color: var(--color-fuente-oscuro);
+  border-radius: 10px;
+  border: 1px solid var(--color-primario);
+  padding: 1.5rem; /* Aire interno*/
+  margin: 2rem 0; /* 2rem arriba/abajo, 0 a los costados */
 }
 
 .lugares_index {
-    border-radius: 5px;
-    margin: 10px;
-    padding: 10px;
-    border-style: groove;
-    text-align: center;
-    flex: 1;
-    min-width: 300px;
-}
-
-#contactanos {
-    color: var(--color-fuente-oscuro);
-    background-color: var(--color-secundario);
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  border-style: groove;
+  text-align: center;
+  flex: 1;
+  min-width: 300px;
 }
 
 /* Estilos de lugares.html. 
 Con .lugares-main se aplican estilos solamente a lugares.html 
 manteniendo concordancia general en  header, footes y aside*/
 .lugares-main section {
-    padding: 1rem 0;
+  padding: 1rem 0;
 }
 
 .lugares-main h2 {
-    margin-bottom: 1rem;
-    color: var(--color-primario);
+  margin-bottom: 1rem;
+  color: var(--color-primario);
 }
 
 .lugares-main article {
-    margin-bottom: 1.5rem;
-    padding: 1.25rem;
-    border: 1px solid var(--color-secundario);
-    border-radius: 10px;
-    background-color: #FFFFFF;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--color-secundario);
+  border-radius: 10px;
+  background-color: #ffffff;
 }
 
 .lugares-main h3 {
-    margin-bottom: 1rem;
-    color: var(--color-primario);
+  margin-bottom: 1rem;
+  color: var(--color-primario);
 }
 
 .lugares-main figure {
-    margin: 1rem 0;
-    text-align: center;
+  margin: 1rem 0;
+  text-align: center;
 }
 
 .lugares-main figure img {
-    width: 100%;
-    max-width: 760px;
-    height: auto;
-    border: 1px solid var(--color-secundario);
-    border-radius: 8px;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  border: 1px solid var(--color-secundario);
+  border-radius: 8px;
 }
 
 .lugares-main figcaption {
-    margin-top: 0.5rem;
-    color: var(--color-fuente-oscuro);
-    font-size: 0.9rem;
-    font-style: italic;
+  margin-top: 0.5rem;
+  color: var(--color-fuente-oscuro);
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .lugares-main dt {
-    margin-top: 0.75rem;
-    color: var(--color-primario);
-    font-weight: bold;
+  margin-top: 0.75rem;
+  color: var(--color-primario);
+  font-weight: bold;
 }
 
 .lugares-main dd {
-    margin-top: 0.25rem;
-    line-height: 1.5;
+  margin-top: 0.25rem;
+  line-height: 1.5;
 }
