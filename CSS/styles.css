@@ -3,6 +3,7 @@
   --color-primario: #2563eb;
   --color-secundario: #dbe2ef;
   --color-fondo: #f9f7f7;
+  --color-acento: #0a07b5eb;
   --fuente: "Inter", sans-serif;
 }
 
@@ -44,6 +45,16 @@ header nav ul {
   list-style: none; /* Elimina los puntitos */
   padding: 0;
 }
+
+header nav a {
+  text-decoration: none; /* Quita el subrayado. Enlaces del menú (Header): limpios por defecto */
+}
+
+header nav a:hover {
+  text-decoration: underline;/* Al pasar el mouse por el menú, le devolvés el subrayado */
+  color: var(--color-acento); /* Al pasar el mouse por el menú, le cambiás el color */
+}
+
 
 section {
   margin-bottom: 2.5rem; /* Separa cada sección temática de la siguiente */
