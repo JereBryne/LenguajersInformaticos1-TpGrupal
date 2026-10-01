@@ -58,3 +58,59 @@ aside {
     color: var(--color-fuente-oscuro);
     background-color: var(--color-secundario);
 }
+
+/* Estilos de lugares.html. 
+Con .lugares-main se aplican estilos solamente a lugares.html 
+manteniendo concordancia general en  header, footes y aside*/
+.lugares-main section {
+    padding: 1rem 0;
+}
+
+.lugares-main h2 {
+    margin-bottom: 1rem;
+    color: var(--color-primario);
+}
+
+.lugares-main article {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    border: 1px solid var(--color-secundario);
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.lugares-main h3 {
+    margin-bottom: 1rem;
+    color: var(--color-primario);
+}
+
+.lugares-main figure {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.lugares-main figure img {
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    border: 1px solid var(--color-secundario);
+    border-radius: 8px;
+}
+
+.lugares-main figcaption {
+    margin-top: 0.5rem;
+    color: var(--color-fuente-oscuro);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.lugares-main dt {
+    margin-top: 0.75rem;
+    color: var(--color-primario);
+    font-weight: bold;
+}
+
+.lugares-main dd {
+    margin-top: 0.25rem;
+    line-height: 1.5;
+}
