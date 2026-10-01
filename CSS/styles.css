@@ -65,6 +65,20 @@ section {
 .tarjeta dice: "yo solo me preocupo por mi relleno, mis bordes y medir al menos 280px".
 
 */
+/* estilos para el footer */
+footer {
+  text-align: center; /* Alinea todo el texto y los enlaces dentro del footer al centro de la pantalla */
+  padding: 1.5rem 0;  /* Agrega espacio interno: 1.5rem arriba/abajo (separa el contenido del borde/línea) y 0 a los lados */
+}
+
+footer address {
+  font-style: normal;  /* Le quita la cursiva/itálica por defecto que los navegadores le aplican a la etiqueta <address> */
+  margin-bottom: 1rem; /* Crea un espacio hacia abajo de 1rem para separar los contactos del siguiente párrafo */
+}
+
+footer address a {
+  margin: 0 0.5rem;    /* Agrega un espacio lateral de 0.5rem a la izquierda y derecha de cada enlace (separa "Escribinos", "Llamanos" y "Seguinos") */
+}
 
 .grilla-tarjeta {
   display: flex;
